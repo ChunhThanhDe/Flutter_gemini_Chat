@@ -74,6 +74,17 @@ Integrate Google's Gemini AI into your Flutter app with ease using the `flutter_
       }
       ```
 
+## 🚀 Demo
+
+You can see the response from the gemini here:
+
+<table>
+<tr>
+<td><img src="https://github.com/Kashish-ChunhThanhDe/Flutter_gemini_Chat/blob/master/media/screenshot_horizontal.png" height="480px"></td>
+<td><img src="https://github.com/Kashish-ChunhThanhDe/Flutter_gemini_Chat/blob/master/media/screenshot_vertical.png" height="480px"></td>
+</tr>
+</table>
+
 ## 🎉 Benefits
 
 - **Easy Integration**: Simplifies adding AI features with clear documentation.
