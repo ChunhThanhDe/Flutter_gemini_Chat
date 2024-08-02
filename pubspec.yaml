@@ -43,10 +43,29 @@ dependencies:
   loading_animation_widget: ^1.2.1
   image_picker_ios: ^0.8.9+2
   flutter_gemini: ^2.0.3
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/icon.png"
+  min_sdk_android: 30
+  web:
+    generate: true
+    image_path: "assets/icons/icon.png"
+    background_color: "#ffffff"
+    theme_color: "#000000"
+  windows:
+    generate: true
+    image_path: "assets/icons/icon.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/icons/icon.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
