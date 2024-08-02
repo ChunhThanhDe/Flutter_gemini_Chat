@@ -14,7 +14,7 @@ class InputFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom:25,left:25,right:25,top:10),
+      margin: const EdgeInsets.only(bottom:20,left:15,right:15,top:10),
       child: Row(
         children: [
           Expanded(

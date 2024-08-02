@@ -8,12 +8,14 @@ import 'package:gemini_demo/ui/views/base_view.dart';
 import 'package:gemini_demo/ui/widgets/emoji_picker.dart';
 import 'package:gemini_demo/ui/widgets/input_field.dart';
 import 'package:gemini_demo/ui/widgets/message_content.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // ignore: must_be_immutable
 class ChatScreen extends StatelessWidget {
   ChatScreen({super.key});
 
   ChatViewModel? model;
+
   @override
   Widget build(BuildContext context) {
     return BaseView<ChatViewModel>(
@@ -22,9 +24,9 @@ class ChatScreen extends StatelessWidget {
       },
       builder: (context, model, child) {
         return GestureDetector(
-          onTap: () { 
+          onTap: () {
             FocusScope.of(context).unfocus();
-            model.setShowEmoji=false;
+            model.setShowEmoji = false;
           },
           child: Container(
             decoration: const BoxDecoration(
@@ -49,7 +51,7 @@ class ChatScreen extends StatelessWidget {
 
   Widget buildAppBar(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, top: 40, bottom: 10),
+      padding: const EdgeInsets.only(left: 10, top: 40, bottom: 20),
       child: ListTile(
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(30),
@@ -59,15 +61,19 @@ class ChatScreen extends StatelessWidget {
           StringConstants.geminiDemo,
           style: TextStyle(color: ColorConstants.white, fontSize: 20),
         ),
-        trailing: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.search,
-              color: ColorConstants.white,
-              size: 30,
-            ),
+        trailing: IconButton(
+          onPressed: () async {
+            const url = 'https://www.linkedin.com/in/chunhthanhde/';
+            if (await canLaunch(url)) {
+              await launch(url);
+            } else {
+              throw 'Could not launch $url';
+            }
+          },
+          icon: const Icon(
+            Icons.link,
+            color: ColorConstants.white,
+            size: 30,
           ),
         ),
       ),
@@ -88,9 +94,7 @@ class ChatScreen extends StatelessWidget {
               if (model?.messages != null) {
                 chatModel = model?.messages[index];
               }
-              return chatModel != null
-                  ? MessageContent(message: chatModel, index: index, lastIndex: lastIndex)
-                  : Container();
+              return chatModel != null ? MessageContent(message: chatModel, index: index, lastIndex: lastIndex) : Container();
             },
           ),
         ),
@@ -100,9 +104,7 @@ class ChatScreen extends StatelessWidget {
         if (model?.showEmoji == true)
           SizedBox(
             height: MediaQuery.of(context).size.height * .35,
-            child: EmojiPickerWidget(
-                controller:
-                    model?.messageController ?? TextEditingController()),
+            child: EmojiPickerWidget(controller: model?.messageController ?? TextEditingController()),
           ),
       ],
     );
