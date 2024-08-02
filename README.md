@@ -1,5 +1,23 @@
 # 🚀 Integrating Gemini into Your Flutter Application
 
+Create gemini robot 💬 chat bot 🤖 with Flutter
+
+Show some ❤️ and star ⭐ the repo if you liked it.
+
+###### contact for work, mail: chunhthanhde.dev@gmail.com
+
+<img src="assets/icons/icon.png" height="100px"  alt="logo"/>
+
+![GitHub stars](https://img.shields.io/github/stars/ChunhThanhDe/Flutter_gemini_Chat?style=social)
+![GitHub forks](https://img.shields.io/github/forks/ChunhThanhDe/Flutter_gemini_Chat?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/ChunhThanhDe/Flutter_gemini_Chat?style=social)
+
+<a href="https://www.linkedin.com/in/chunhthanhde/">
+<img src="https://img.shields.io/badge/Support-Recommend%2FEndorse%20me%20on%20Linkedin-blue?style=for-the-badge&logo=linkedin" alt="Support me on LinkedIn" />
+</a>
+
+<a href="https://www.buymeacoffee.com/chunhthanhde" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
 ## 📚 Overview
 
 Integrate Google's Gemini AI into your Flutter app with ease using the `flutter_gemini` package. This guide will help you enhance your app's functionality by leveraging Gemini's advanced AI features, including multilingual support, image and audio processing, and Natural Language Processing (NLP).
