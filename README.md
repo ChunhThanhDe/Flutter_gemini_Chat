@@ -1,8 +1,6 @@
 # 🚀 Integrating Gemini into Your Flutter Application
 
-Create gemini robot 💬 chat bot 🤖 with Flutter
-
-Show some ❤️ and star ⭐ the repo if you liked it.
+Create gemini robot 💬 chat bot 🤖 with Flutter. Show some ❤️ and star ⭐ the repo if you liked it.
 
 ###### contact for work, mail: chunhthanhde.dev@gmail.com
 
