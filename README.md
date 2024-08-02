@@ -1,10 +1,10 @@
-### 🚀 Integrating Gemini into Your Flutter Application
+# 🚀 Integrating Gemini into Your Flutter Application
 
-#### 📚 Overview
+## 📚 Overview
 
 Integrate Google's Gemini AI into your Flutter app with ease using the `flutter_gemini` package. This guide will help you enhance your app's functionality by leveraging Gemini's advanced AI features, including multilingual support, image and audio processing, and Natural Language Processing (NLP).
 
-#### 🌟 Key Features of Gemini
+## 🌟 Key Features of Gemini
 
 - **Stream Generate Content**: Handle partial results with streaming without waiting for the complete response.
 - **Text-only Input**: Complete and summarize texts using NLP.
@@ -14,21 +14,31 @@ Integrate Google's Gemini AI into your Flutter app with ease using the `flutter_
 - **Model Info**: Retrieve details about the model, including version and input token limits.
 - **EmbedContents and BatchEmbedContents**: Transform information into numerical arrays for learning.
 
-#### 🏁 Implementation Steps
+## 🏁 Implementation Steps
 
 1. **Obtain an API Key** 🔑
    Create an account at [Google Gemini](https://ai.google.dev/tutorials/setup).
    
     - Click on "Get API Key,"
+   
       ![](media/steps/step1-1.webp)
+   
     - select a Google Cloud project,
+   
       ![](media/steps/step1-2.webp)
+   
     - and generate your API key.
+   
       ![](media/steps/step1-3.webp)
+   
     - Save this key for later use.
+   
       ![](media/steps/step1-4.webp)
+
 2. **Add Dependency** 📦
+
    ![](media/steps/step2-1.webp)
+
     - Add the `flutter_gemini` package to your project by running:
       ```sh
       flutter pub add flutter_gemini
@@ -64,17 +74,17 @@ Integrate Google's Gemini AI into your Flutter app with ease using the `flutter_
       }
       ```
 
-#### 🎉 Benefits
+## 🎉 Benefits
 
 - **Easy Integration**: Simplifies adding AI features with clear documentation.
 - **Cross-Platform Compatibility**: Supports Android, iOS, web, macOS, and Windows from a single codebase.
 - **Reduced Time to Market**: Speeds up the integration of AI features into your app.
 
-#### 🌟 Conclusion
+## 🌟 Conclusion
 
 Integrating Google Gemini into your Flutter app with the `flutter_gemini` package opens up new possibilities for enhancing user experience. Utilize Gemini's powerful AI capabilities to add multilingual support, process images and audio, and implement advanced chatbot functionality.
 
-#### 📚 References
+## 📚 References
 
 - [flutter_gemini Package](https://pub.dev/packages/flutter_gemini)
 - [GitHub Repository](https://github.com/ChunhThanhDe/Flutter_gemini_Chat)
