@@ -80,8 +80,8 @@ You can see the response from the gemini here:
 
 <table>
 <tr>
-<td><img src="https://github.com/Kashish-ChunhThanhDe/Flutter_gemini_Chat/blob/master/media/screenshot_horizontal.png" height="480px"></td>
-<td><img src="https://github.com/Kashish-ChunhThanhDe/Flutter_gemini_Chat/blob/master/media/screenshot_vertical.png" height="480px"></td>
+<td><img src="https://github.com/ChunhThanhDe/Flutter_gemini_Chat/blob/master/media/screenshot_horizontal.jpg" height="480px"></td>
+<td><img src="https://github.com/ChunhThanhDe/Flutter_gemini_Chat/blob/master/media/screenshot_vertical.jpg" height="480px"></td>
 </tr>
 </table>
 
