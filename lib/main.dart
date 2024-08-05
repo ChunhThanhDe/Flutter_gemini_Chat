@@ -6,10 +6,7 @@ import 'package:gemini_demo/ui/views/my_app.dart';
 void main() {
   setUpLocator();
   Gemini.init(
-    apiKey: "AIzaSyBGYUXHZrK3jt-liVRNhCIrtcTB9QgA8O8",
+    apiKey: "Your-API-Key",
   );
   runApp(const MyApp());
 }
-
-
-
