@@ -25,7 +25,10 @@ class GeminiRepository {
   }
 
   Future<String> sendText(String text) async {
-    String val = await _gemini.text(text).then((value) {
+    String val = await _gemini.text(
+      text,
+      modelName: "models/gemini-1.5-flash",
+    ).then((value) {
       log("Gemini Chat - Parts:  ${value?.content?.parts}");
       log("Gemini Chat - Roles:  ${value?.content?.role}");
       setResponse(value?.output ?? "");
@@ -43,6 +46,7 @@ class GeminiRepository {
     String val = await _gemini.textAndImage(
       text: text,
       images: [imageFile.readAsBytesSync()],
+      modelName: "models/gemini-1.5-flash",
     ).then((value) {
 
       log("Gemini Chat - Send Text and Image: ");
