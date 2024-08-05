@@ -17,24 +17,28 @@ class ChatViewModel extends BaseModel {
   int? _modelResponseIndex;
 
   List<ChatModel> get messages => _messages;
+
   set messages(List<ChatModel> value) {
     _messages = value;
     updateUI();
   }
 
   File? get imageFile => _imageFile;
+
   set imageFile(File? value) {
     _imageFile = value;
     updateUI();
   }
 
   bool? get showEmoji => _showEmoji;
+
   set setShowEmoji(bool? value) {
     _showEmoji = value;
     updateUI();
   }
 
   int? get modelResponseIndex => _modelResponseIndex;
+
   set modelResponseIndex(int? value) {
     _modelResponseIndex = value;
     updateUI();
@@ -61,10 +65,7 @@ class ChatViewModel extends BaseModel {
     modelResponseIndex = messages.length;
     scrollMessages();
     updateUI();
-    String response = sendFile != null
-        ? await apiRepository.sendTextAndImage(
-            messageController.text, sendFile)
-        : await apiRepository.sendText(messageController.text);
+    String response = sendFile != null ? await apiRepository.sendTextAndImage(messageController.text, sendFile) : await apiRepository.sendText(messageController.text);
     messages.removeAt(messages.length - 1);
     messages.add(ChatModel(
       role: Roles.model,
@@ -87,7 +88,7 @@ class ChatViewModel extends BaseModel {
       final pickedImage = await ImagePicker().pickImage(source: source);
       if (pickedImage != null) {
         imageFile = File(pickedImage.path);
-      
+
         updateUI();
         return imageFile;
       } else {

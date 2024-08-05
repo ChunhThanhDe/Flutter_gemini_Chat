@@ -5,16 +5,18 @@ import 'package:gemini_demo/core/constants/color_consant.dart';
 import 'package:gemini_demo/core/constants/image_constants.dart';
 import 'package:gemini_demo/core/view_models/chat_view_model.dart';
 import 'package:gemini_demo/ui/widgets/common_input_field_buttons.dart';
-import 'package:gemini_demo/ui/widgets/pop_up_menu.dart';
 import 'package:gemini_demo/ui/widgets/common_text_form_field.dart';
+import 'package:gemini_demo/ui/widgets/pop_up_menu.dart';
 
 class InputFieldWidget extends StatelessWidget {
   const InputFieldWidget({super.key, this.model});
+
   final ChatViewModel? model;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom:20,left:15,right:15,top:10),
+      margin: const EdgeInsets.only(bottom: 20, left: 15, right: 15, top: 10),
       child: Row(
         children: [
           Expanded(
@@ -41,8 +43,7 @@ class InputFieldWidget extends StatelessWidget {
                           child: Image(
                             height: 200,
                             width: 200,
-                            image: FileImage(
-                                model?.imageFile ?? File(ImageConstants.demo)),
+                            image: FileImage(model?.imageFile ?? File(ImageConstants.demo)),
                           ),
                         )
                       : const SizedBox(),
@@ -54,7 +55,7 @@ class InputFieldWidget extends StatelessWidget {
                         icon: Icons.emoji_emotions,
                         onpressed: () {
                           FocusScope.of(context).unfocus();
-                          model?.setShowEmoji=true;
+                          model?.setShowEmoji = true;
                         },
                       ),
                       model?.imageFile == null
@@ -66,32 +67,25 @@ class InputFieldWidget extends StatelessWidget {
                       InputFieldButton(
                         icon: Icons.attach_file,
                         onpressed: () {
-                           model?.setShowEmoji=false;
+                          model?.setShowEmoji = false;
                           showModalBottomSheet(
                               backgroundColor: ColorConstants.transparent,
                               context: context,
                               isScrollControlled: true,
                               builder: (builder) => Padding(
-                                  padding: EdgeInsets.only(
-                                      bottom: MediaQuery.of(context)
-                                          .viewInsets
-                                          .bottom),
-                                  child: PopUpWidget(model: model,)));
+                                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                                  child: PopUpWidget(
+                                    model: model,
+                                  )));
                         },
                       ),
                       InputFieldButton(
                         icon: Icons.send,
                         onpressed: () {
-                          if (model?.imageFile != null &&
-                              model!.messageController.text
-                                  .toString()
-                                  .isEmpty) {
+                          if (model?.imageFile != null && model!.messageController.text.toString().isEmpty) {
                             model?.getTextAndImageInfo();
                           }
-                          if (model?.messageController.text
-                                  .toString()
-                                  .isNotEmpty ??
-                              false) {
+                          if (model?.messageController.text.toString().isNotEmpty ?? false) {
                             model?.getTextAndImageInfo();
                             model?.messageController.clear();
                           }

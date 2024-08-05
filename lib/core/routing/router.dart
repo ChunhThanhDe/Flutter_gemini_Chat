@@ -10,8 +10,7 @@ class PageRoutes {
         return MaterialPageRoute(builder: (context) => ChatScreen());
 
       default:
-        return MaterialPageRoute(
-            builder: (context) => const Text(StringConstants.noPageExists));
+        return MaterialPageRoute(builder: (context) => const Text(StringConstants.noPageExists));
     }
   }
 }

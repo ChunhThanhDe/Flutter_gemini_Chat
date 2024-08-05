@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:gemini_demo/core/di/locator.dart';
 import 'package:gemini_demo/core/view_models/base_model.dart';
@@ -6,6 +5,7 @@ import 'package:provider/provider.dart';
 
 class BaseView<T extends BaseModel> extends StatefulWidget {
   const BaseView({super.key, required this.builder, this.onModelReady});
+
   final Widget Function(BuildContext context, T model, Widget? child) builder;
   final Function(T)? onModelReady;
 

@@ -6,16 +6,20 @@ import 'package:gemini_demo/core/constants/string_constant.dart';
 class GeminiRepository {
   late Gemini _gemini;
   static final GeminiRepository _instance = GeminiRepository._internal();
+
   factory GeminiRepository() {
     return _instance;
   }
+
   GeminiRepository._internal() {
     _gemini = Gemini.instance;
     _response = reponse;
   }
 
   String? _response;
+
   String? get reponse => _response;
+
   void setResponse(String? value) {
     _response = value;
   }
