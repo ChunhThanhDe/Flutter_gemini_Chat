@@ -8,13 +8,13 @@ class BaseModel with ChangeNotifier {
   ViewState get state => _state;
 
   set state(ViewState viewState) {
-    log('State:$viewState');
+    log('Gemini Chat - State: $viewState');
     _state = viewState;
     notifyListeners();
   }
 
   set stateWithoutUpdate(ViewState viewState) {
-    log('State:$viewState');
+    log('Gemini Chat - State: $viewState');
     _state = viewState;
   }
 

@@ -92,11 +92,11 @@ class ChatViewModel extends BaseModel {
         updateUI();
         return imageFile;
       } else {
-        log('User didnt pick any image.');
+        log('Gemini Chat: User didnt pick any image.');
       }
       imageFile = null;
     } catch (e) {
-      log(e.toString());
+      log("Gemini Chat: "+ e.toString());
     }
   }
 }

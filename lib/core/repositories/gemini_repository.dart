@@ -26,15 +26,16 @@ class GeminiRepository {
 
   Future<String> sendText(String text) async {
     String val = await _gemini.text(text).then((value) {
-      log("Parts>>>>>>>>>${value?.content?.parts}");
-      log("Roles>>>>>>>>>${value?.content?.role}");
+      log("Gemini Chat - Parts:  ${value?.content?.parts}");
+      log("Gemini Chat - Roles:  ${value?.content?.role}");
       setResponse(value?.output ?? "");
       if (value?.finishReason != 'STOP') {
         setResponse(value?.output ?? StringConstants.invalidQuery);
       }
       return _response ?? "";
     }).catchError((e) => "$e");
-    log(val);
+
+    log("Gemini Chat - value: " + val);
     return val;
   }
 
@@ -43,14 +44,18 @@ class GeminiRepository {
       text: text,
       images: [imageFile.readAsBytesSync()],
     ).then((value) {
+
+      log("Gemini Chat - Send Text and Image: ");
       log(value?.content?.parts?.last.text ?? '');
-      log("Roles>>>>>>>>>${value?.content?.role}");
+      log("Gemini Chat - Roles: ${value?.content?.role}");
+
       setResponse(_response = value?.content?.parts?.last.text ?? '');
       if (value?.finishReason != 'STOP') {
         setResponse(StringConstants.invalidQuery);
       }
       return value?.content?.parts?.last.text ?? '';
     }).catchError((e) => "$e");
+
     return val;
   }
 }
