@@ -32,6 +32,7 @@ class ChatScreen extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(ImageConstants.defaultWallpaper),
+                fit: BoxFit.cover, // Cover the container's area
               ),
             ),
             child: Scaffold(
@@ -53,9 +54,22 @@ class ChatScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, top: 40, bottom: 20),
       child: ListTile(
-        leading: ClipRRect(
-          borderRadius: BorderRadius.circular(30),
-          child: Image.asset(ImageConstants.logo, fit: BoxFit.fill),
+        leading: Container(
+          margin: EdgeInsets.all(3),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            border: Border.all(
+              color: Colors.grey, // Gray border color
+              width: 1, // Border width
+            ),
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(30),
+            child: Image.asset(
+              ImageConstants.logo, // Replace with your image asset path
+              fit: BoxFit.fill,
+            ),
+          ),
         ),
         title: const Text(
           StringConstants.geminiDemo,
