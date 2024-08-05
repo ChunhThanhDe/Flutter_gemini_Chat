@@ -4,7 +4,7 @@ Create gemini robot 💬 chat bot 🤖 with Flutter. Show some ❤️ and star �
 
 ###### contact for work, mail: chunhthanhde.dev@gmail.com
 
-<img src="assets/icons/icon.png" height="100px"  alt="logo"/>
+<img src="assets/icons/icon.png" height="120px"  alt="logo"/>
 
 ![GitHub stars](https://img.shields.io/github/stars/ChunhThanhDe/Flutter_gemini_Chat?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/ChunhThanhDe/Flutter_gemini_Chat?style=social)
