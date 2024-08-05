@@ -13,12 +13,12 @@ class GeminiRepository {
 
   GeminiRepository._internal() {
     _gemini = Gemini.instance;
-    _response = reponse;
+    _response = response;
   }
 
   String? _response;
 
-  String? get reponse => _response;
+  String? get response => _response;
 
   void setResponse(String? value) {
     _response = value;
