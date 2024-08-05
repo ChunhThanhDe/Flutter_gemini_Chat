@@ -5,6 +5,7 @@ import 'package:gemini_demo/core/view_models/chat_view_model.dart';
 
 class TextFormFieldWidget extends StatelessWidget {
   const TextFormFieldWidget({super.key, required this.model});
+
   final ChatViewModel? model;
 
   @override
@@ -12,7 +13,7 @@ class TextFormFieldWidget extends StatelessWidget {
     return TextField(
       onTap: () {
         if (model?.showEmoji == true) {
-          model?.setShowEmoji=false;
+          model?.setShowEmoji = false;
         }
       },
       onEditingComplete: () {
@@ -31,14 +32,12 @@ class TextFormFieldWidget extends StatelessWidget {
       decoration: InputDecoration(
         counterStyle: const TextStyle(color: ColorConstants.white54),
         hintText: StringConstants.typeMessage,
-        hintStyle:
-            const TextStyle(color: ColorConstants.white54, fontSize: 15),
+        hintStyle: const TextStyle(color: ColorConstants.white54, fontSize: 15),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(25.0),
           borderSide: BorderSide.none,
         ),
-        contentPadding:
-            const EdgeInsets.symmetric(vertical: 12.0),
+        contentPadding: const EdgeInsets.symmetric(vertical: 12.0),
       ),
     );
   }

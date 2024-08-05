@@ -35,7 +35,7 @@ class GeminiRepository {
       return _response ?? "";
     }).catchError((e) => "$e");
 
-    log("Gemini Chat - value: " + val);
+    log("Gemini Chat - value:  " + val);
     return val;
   }
 
