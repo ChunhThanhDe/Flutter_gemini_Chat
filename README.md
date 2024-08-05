@@ -92,7 +92,7 @@ Integrate Google's Gemini AI into your Flutter app with ease using the `flutter_
 
 ## 🚀 Demo
 
-You can see the response from the gemini here:
+You can see the response from the gemini here: https://www.youtube.com/watch?v=SUzw8YPLYZM
 
 <table>
 <tr>
